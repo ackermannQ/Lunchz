@@ -1,0 +1,25 @@
+{
+  "data": [
+      { 
+        "nom": "Original",
+        "location": 
+        {
+          "positionByDay": 
+          {
+            "Monday": "Dans ton cul",
+            "Tuesday": "Dans ton cul",
+            "Wednesday": "Dans ton cul"
+          }
+        },
+        "totalVote": 0
+      },
+      { 
+        "nom": "Léo",
+        "location": 
+        {
+          "position": "Dans ton cul"
+        },
+        "totalVote": 0
+      }
+  ]
+}
