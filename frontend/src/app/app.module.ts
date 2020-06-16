@@ -9,22 +9,28 @@ import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 
 import { AppComponent } from './app.component';
+import { FoodspotComponent } from './foodspot/foodspot.component';
+import {GalleriaModule} from 'primeng/galleria';
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        TableModule,
-        HttpClientModule,
-        InputTextModule,
-        DialogModule,
-        ButtonModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      FoodspotComponent
+   ],
+   imports: [
+      BrowserModule,
+      BrowserAnimationsModule,
+      FormsModule,
+      TableModule,
+      HttpClientModule,
+      InputTextModule,
+      DialogModule,
+      ButtonModule,
+      GalleriaModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
