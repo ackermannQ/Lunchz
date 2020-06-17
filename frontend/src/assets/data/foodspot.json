@@ -1,7 +1,7 @@
 {
   "data": [
       { 
-        "nom": "Original",
+        "name": "Original",
         "location": 
         {
           "positionByDay": 
@@ -11,15 +11,17 @@
             "Wednesday": "Dans ton cul3"
           }
         },
-        "totalVote": 0
+        "totalVote": 1,
+        "profileImage": "../assets/images/galleria1.jpg"
       },
       { 
-        "nom": "Léo",
+        "name": "Léo",
         "location": 
         {
           "position": "Dans ton cul"
         },
-        "totalVote": 0
+        "totalVote": 0,
+        "profileImage": "../assets/images/galleria1.jpg"
       }
   ]
 }

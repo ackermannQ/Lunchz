@@ -1,8 +1,22 @@
 import { Day } from './day.enum';
+import { Position } from './position';
 
-export interface Location {
+export class Location {
 
-  getPosition(day: Day);
+  position: Position;
+  positionByDay: Map<Day, Position>;
 
+  constructor(json: any) {
+    this.positionByDay = json.positionByDay;
+    this.position = json.position;
+  }
+
+  getPosition(day: Day) {
+    if (this.position) {
+      return this.position;
+    } else {
+      return this.positionByDay[day];
+    }
+  }
 }
 

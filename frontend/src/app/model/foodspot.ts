@@ -1,4 +1,6 @@
-export interface Foodspot {
+import { Location } from './location';
+
+export class Foodspot {
   name: string;
   location: Location;
   total_vote: number;
@@ -6,4 +8,5 @@ export interface Foodspot {
   upvote: number;
   totalVote: number;
   profileImage: string;
+
 }
