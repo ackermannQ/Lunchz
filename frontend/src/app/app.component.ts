@@ -10,29 +10,11 @@ import { FoodspotService } from './services/foodspot.service';
 })
 export class AppComponent implements OnInit {
 
-    selectedSpot: Foodspot;
 
-    upVote: boolean;
-
-    foodspot: Foodspot[];
-
-    cols: any[];
-
-    constructor(private foodspotService: FoodspotService) { }
+    constructor() { }
 
     ngOnInit() {
-        this.foodspotService.getFoodSpot().then(foodspot => this.foodspot);
 
-        this.cols = [
-            { field: 'foodspot', header: 'Spot' },
-            { field: 'location', header: 'Localisation' },
-            { field: 'menu', header: 'Menu' },
-            { field: 'upvote', header: 'Votez !' },
-            { field: 'totalVotes', header: 'Nombre de votes' }
-        ];
     }
 
-    findSelectedFoodSpotIndex(): number {
-        return this.foodspot.indexOf(this.selectedSpot);
-    }
 }

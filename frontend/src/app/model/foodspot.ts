@@ -5,4 +5,5 @@ export interface Foodspot {
   menu: URL;
   upvote: number;
   totalVote: number;
+  profileImage: string;
 }
