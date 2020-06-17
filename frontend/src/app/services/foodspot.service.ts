@@ -11,7 +11,7 @@ export class FoodspotService {
 
     getFoodSpot(): Observable<Foodspot[]> {
         return this.http.get<any>('assets/data/foodspot.json').pipe(map(res => {
-            return res.data;
+            return res.data.map(json => new Foodspot(json));
         }));
     }
 }

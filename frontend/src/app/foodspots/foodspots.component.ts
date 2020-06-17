@@ -26,7 +26,6 @@ export class FoodspotsComponent implements OnInit {
   ngOnInit() {
     this.foodSpotService.getFoodSpot().subscribe(foodSpots => {
       this.foodSpots = foodSpots;
-      console.log(this.foodSpots);
       this.updateSelected();
     });
   }

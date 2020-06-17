@@ -11,7 +11,7 @@ export class Location {
     this.position = json.position;
   }
 
-  getPosition(day: Day) {
+  getPosition(day: Day): Position {
     if (this.position) {
       return this.position;
     } else {
