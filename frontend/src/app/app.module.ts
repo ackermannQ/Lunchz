@@ -10,12 +10,13 @@ import { DialogModule } from 'primeng/dialog';
 
 import { AppComponent } from './app.component';
 import { FoodspotComponent } from './foodspot/foodspot.component';
-import {GalleriaModule} from 'primeng/galleria';
+import { FoodspotImageComponent } from './foodspot-image/foodspot-image.component';
 
 @NgModule({
    declarations: [
       AppComponent,
-      FoodspotComponent
+      FoodspotComponent,
+      FoodspotImageComponent
    ],
    imports: [
       BrowserModule,
@@ -25,8 +26,7 @@ import {GalleriaModule} from 'primeng/galleria';
       HttpClientModule,
       InputTextModule,
       DialogModule,
-      ButtonModule,
-      GalleriaModule
+      ButtonModule
    ],
    providers: [],
    bootstrap: [

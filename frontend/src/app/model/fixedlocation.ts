@@ -6,7 +6,7 @@ export class FixedLocation implements Location {
 
   position: GpsPos;
 
-  getPosition(day: Day) {
+  getPosition(day: Day){
     return this.position;
   }
 

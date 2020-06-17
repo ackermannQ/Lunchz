@@ -1,76 +1,38 @@
 import { Component, OnInit } from '@angular/core';
-import { Car } from './domain/car';
-import { CarService } from './services/carservice';
-
-export class PrimeCar implements Car {
-    constructor(public vin?, public year?, public brand?, public color?) {}
-}
+import { Foodspot } from './model/foodspot';
+import { FoodspotService } from './services/foodspot.service';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    providers: [CarService]
+    providers: [FoodspotService]
 })
 export class AppComponent implements OnInit {
 
-    displayDialog: boolean;
+    selectedSpot: Foodspot;
 
-    car: Car = new PrimeCar();
+    upVote: boolean;
 
-    selectedCar: Car;
-
-    newCar: boolean;
-
-    cars: Car[];
+    foodspot: Foodspot[];
 
     cols: any[];
 
-    constructor(private carService: CarService) { }
+    constructor(private foodspotService: FoodspotService) { }
 
     ngOnInit() {
-        this.carService.getCarsSmall().then(cars => this.cars = cars);
+        this.foodspotService.getFoodSpot().then(foodspot => this.foodspot);
 
         this.cols = [
-            { field: 'vin', header: 'Vin' },
-            { field: 'year', header: 'Year' },
-            { field: 'brand', header: 'Brand' },
-            { field: 'color', header: 'Color' }
+            { field: 'foodspot', header: 'Spot' },
+            { field: 'location', header: 'Localisation' },
+            { field: 'menu', header: 'Menu' },
+            { field: 'upvote', header: 'Votez !' },
+            { field: 'totalVotes', header: 'Nombre de votes' }
         ];
     }
 
-    showDialogToAdd() {
-        this.newCar = true;
-        this.car = new PrimeCar();
-        this.displayDialog = true;
-    }
-
-    save() {
-        const cars = [...this.cars];
-        if (this.newCar) {
-            cars.push(this.car);
-        } else {
-            cars[this.findSelectedCarIndex()] = this.car;
-        }
-        this.cars = cars;
-        this.car = null;
-        this.displayDialog = false;
-    }
-
-    delete() {
-        const index = this.findSelectedCarIndex();
-        this.cars = this.cars.filter((val, i) => i !== index);
-        this.car = null;
-        this.displayDialog = false;
-    }
-
-    onRowSelect(event) {
-        this.newCar = false;
-        this.car = {...event.data};
-        this.displayDialog = true;
-    }
-
-    findSelectedCarIndex(): number {
-        return this.cars.indexOf(this.selectedCar);
+    findSelectedFoodSpotIndex(): number {
+        return this.foodspot.indexOf(this.selectedSpot);
     }
 }
