@@ -6,9 +6,9 @@
         {
           "positionByDay": 
           {
-            "1": "Dans ton cul1",
-            "2": "Dans ton cul2",
-            "3": "Dans ton cul3"
+            "1": "Lieu original1",
+            "2": "Lieu original2",
+            "3": "Lieu original3"
           }
         },
         "totalVote": 1,
@@ -18,7 +18,7 @@
         "name": "Léo",
         "location": 
         {
-          "position": "Dans ton cul"
+          "position": "Lieu Léo"
         },
         "totalVote": 0,
         "profileImage": "../assets/images/galleria1.jpg"

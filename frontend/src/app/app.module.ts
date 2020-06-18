@@ -12,13 +12,20 @@ import { AppComponent } from './app.component';
 import { FoodspotsComponent } from './foodspots/foodspots.component';
 import { LocationComponent } from './foodspots/location.component';
 import { FoodspotImageComponent } from './foodspot-image/foodspot-image.component';
+import { WeatherComponent } from './weather/weather.component';
+import { GmapComponent } from './gmap/gmap.component';
+import { GMapModule } from 'primeng/gmap';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
    declarations: [
       AppComponent,
       FoodspotsComponent,
       LocationComponent,
-      FoodspotImageComponent
+      FoodspotImageComponent,
+      WeatherComponent,
+      GmapComponent
    ],
    imports: [
       BrowserModule,
@@ -28,9 +35,11 @@ import { FoodspotImageComponent } from './foodspot-image/foodspot-image.componen
       HttpClientModule,
       InputTextModule,
       DialogModule,
-      ButtonModule
+      ButtonModule,
+      GMapModule,
+      GoogleMapsModule
    ],
-   providers: [],
+   providers: [MessageService],
    bootstrap: [
       AppComponent
    ]

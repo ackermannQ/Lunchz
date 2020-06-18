@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Foodspot } from './model/foodspot';
+
 import { FoodspotService } from './services/foodspot.service';
 
 @Component({
@@ -10,11 +10,30 @@ import { FoodspotService } from './services/foodspot.service';
 })
 export class AppComponent implements OnInit {
 
+    showMenu = false;
+    darkModeActive = false;
+
 
     constructor() { }
 
     ngOnInit() {
 
+    }
+
+    toggleMenu() {
+        if (!this.showMenu) {
+            this.showMenu = true;
+        } else {
+            this.showMenu = false;
+        }
+    }
+
+    modeToggleSwitch() {
+        if (!this.darkModeActive) {
+            this.darkModeActive = true;
+        } else {
+            this.darkModeActive = false;
+        }
     }
 
 }
