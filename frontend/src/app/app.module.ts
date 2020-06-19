@@ -11,7 +11,6 @@ import { DialogModule } from 'primeng/dialog';
 import { AppComponent } from './app.component';
 import { FoodspotsComponent } from './foodspots/foodspots.component';
 import { LocationComponent } from './foodspots/location.component';
-import { FoodspotImageComponent } from './foodspot-image/foodspot-image.component';
 import { WeatherComponent } from './weather/weather.component';
 import { GmapComponent } from './gmap/gmap.component';
 import { GMapModule } from 'primeng/gmap';
@@ -23,7 +22,6 @@ import { MessageService } from 'primeng/api';
       AppComponent,
       FoodspotsComponent,
       LocationComponent,
-      FoodspotImageComponent,
       WeatherComponent,
       GmapComponent
    ],

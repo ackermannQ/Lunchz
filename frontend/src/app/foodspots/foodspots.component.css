@@ -1,19 +1,10 @@
-.foodspot-image {
+.foodspot__image {
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   }
 
-  .foodspot-image:hover {
-    border-radius: 0.5rem;
-    }
-  
-
-  .table__container {
-    margin-top:1em;
-  }
-/* 
-  :host >>> .choice__table .ui-table {
-    border-radius: 0.5rem;
-  } */
+.table__container {
+  margin-top: 1em;
+}
