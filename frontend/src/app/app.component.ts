@@ -29,8 +29,18 @@ export class AppComponent implements OnInit {
           view: new ol.View({
             center: ol.proj.fromLonLat([5.343100, 43.493333]),
             zoom: 12
+            }),
+        });
+        const layer = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([5.343100, 43.493333]))
+                    })
+                ]
             })
         });
+        this.map.addLayer(layer);
     }
 
     toggleMenu() {

@@ -221,6 +221,7 @@ p-table {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  margin-left: 1.5em;
 }
 
 /*Content*/
@@ -291,9 +292,19 @@ p-table {
 }
 
 .tile {
-  width: 100%;
-  height: 100%;
+  width: 98%;
   object-fit: cover;
+  /* height: 727px; */
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 0 5rem rgba(0, 0, 255, 0.1);
+  justify-items: center;
+  padding: 2rem;
+  margin: 0rem;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 1.25rem;
+  animation: 1.15s ease-in-out 0ms 1 fadein;
 }
 
 .tile:hover {
@@ -304,7 +315,6 @@ p-table {
   -moz-box-shadow: 0 0 50px black;
   box-shadow: 0 0 50px black;
   transition: 0.6s;
-
 }
 
 .main-container__bg {
@@ -329,20 +339,7 @@ p-table {
 }
 
 .map {
-  width: 100%;
-  height: 727px;
-  display: grid;
-  grid-template-columns: 1fr;
-  box-shadow: 0 0 5rem rgba(0, 0, 255, 0.1);
-  justify-items: center;
-  padding: 2rem;
-  margin: 0rem;
-  width: 40rem;
-  height: 25;
-  cursor: pointer;
-  background-color: white;
-  border-radius: 1.75rem;
-  animation: 1.25s ease-in-out 0ms 1 fadein;
+  width: 105%;
 }
 
 /*
