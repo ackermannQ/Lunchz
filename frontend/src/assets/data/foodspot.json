@@ -8,10 +8,12 @@
           {
             "1": "Lieu original1",
             "2": "Lieu original2",
-            "3": "Lieu original3"
+            "3": "Lieu original3",
+            "4": "Lieu original4",
+            "5": "Lieu original5"
           }
         },
-        "menu": "SiteOuf.com",
+        "menu": "Menu1",
         "totalVote": 1,
         "profileImage": "../assets/images/galleria1.jpg"
       },
@@ -50,7 +52,9 @@
           {
             "1": "Lieu1",
             "2": "Lieu2",
-            "3": "Lieu3"
+            "3": "Lieu3",
+            "4": "Lieu4",
+            "5": "Lieu5"
           }
         },
         "totalVote": 0,
@@ -73,7 +77,9 @@
           {
             "1": "Lieu1",
             "2": "Lieu2",
-            "3": "Lieu3"
+            "3": "Lieu3",
+            "4": "Lieu4",
+            "5": "Lieu5"
           }
         },
         "totalVote": 0,

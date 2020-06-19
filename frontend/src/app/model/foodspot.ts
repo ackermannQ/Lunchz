@@ -14,6 +14,7 @@ export class Foodspot {
     this.upvote = json.upvote;
     this.totalVote = json.totalVote;
     this.profileImage = json.profileImage;
+    this.menu = json.menu;
 
    }
 

@@ -17,7 +17,7 @@ export class FoodspotsComponent implements OnInit {
   constructor(private foodSpotService: FoodspotService) {
     this.cols = [
       { field: 'name', header: 'Spot' },
-      { field: 'location', header: 'Localisation' },
+      { field: 'location', header: 'Distance' },
       { field: 'menu', header: 'Menu' },
       { field: 'upvote', header: 'Votez !' }
     ];

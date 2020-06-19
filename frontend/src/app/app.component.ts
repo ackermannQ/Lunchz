@@ -19,28 +19,33 @@ export class AppComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-        this.map = new ol.Map({
-          target: 'map',
-          layers: [
-            new ol.layer.Tile({
-              source: new ol.source.OSM()
-            })
-            ],
-          view: new ol.View({
-            center: ol.proj.fromLonLat([5.343100, 43.493333]),
-            zoom: 12
-            }),
-        });
-        const layer = new ol.layer.Vector({
-            source: new ol.source.Vector({
-                features: [
-                    new ol.Feature({
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([5.343100, 43.493333]))
-                    })
-                ]
-            })
-        });
-        this.map.addLayer(layer);
+        setTimeout(() => {
+            this.map = new ol.Map({
+                target: 'map',
+                // pixelRatio: 1,
+                layers: [
+                  new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                  })
+                  ],
+                view: new ol.View({
+                  center: ol.proj.fromLonLat([5.343100, 43.493333]),
+                  zoom: 12.5
+                  }),
+              });
+              const layer = new ol.layer.Vector({
+                  source: new ol.source.Vector({
+                      features: [
+                          new ol.Feature({
+                              geometry: new ol.geom.Point(ol.proj.fromLonLat([5.343100, 43.493333]))
+                          })
+                      ]
+                  })
+              });
+              this.map.addLayer(layer);
+              this.map.updateSize();
+        }, 0);
+
     }
 
     toggleMenu() {
