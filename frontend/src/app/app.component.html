@@ -22,12 +22,13 @@
   
           <div class="left__section">
             <svg (click)="toggleMenu()" class="hamburger__icon" id="Menu_Burger_Icon">
-                <svg class="hamburger__icon" id="Menu_Burger_Icon" data-name="Menu Burger Icon" viewBox="31.5 30 49.9 32">
+                <!-- <svg class="hamburger__icon" id="Menu_Burger_Icon" data-name="Menu Burger Icon" viewBox="31.5 30 49.9 32">
                   <rect id="Rectangle_9" width="49.9" height="4" class="hamburger__icon__fill" data-name="Rectangle 9" rx="2" transform="translate(31.5 58)"/><rect id="Rectangle_10" width="49.9" height="4" class="hamburger__icon__fill" data-name="Rectangle 10" rx="2" transform="translate(31.5 44)"/><rect id="Rectangle_11" width="49.9" height="4" class="hamburger__icon__fill" data-name="Rectangle 11" rx="2" transform="translate(31.5 30)"/>
                   <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
-                </svg>
+                </svg> -->
             </svg>
-            <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+            <svg [ngClass]="{'hamburger__icon__fill-dark': darkModeActive}" class="hamburger__icon__fill" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
   
           </div>
   
@@ -59,17 +60,15 @@
             <app-foodspots></app-foodspots>
           </div>
           <div class="tile">
-            <div id="map" class="map">
-              
-            </div>
+            <div id="map" class="map"></div>
           </div>
-      </div>
+        </div>
           
       </main>
   
   
-    <footer class="main__footer">
-      <small class="copyright__text">Copyright © 2020 Hackermann</small>
+    <footer class="main__footer" [ngClass]="{'main__footer-dark': darkModeActive}">
+      <small  [ngClass]="{'copyright__text-dark': darkModeActive}" class="copyright__text">Copyright © 2020 Hackermann</small>
     </footer>
   </div>
 

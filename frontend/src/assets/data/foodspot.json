@@ -11,6 +11,7 @@
             "3": "Lieu original3"
           }
         },
+        "menu": "SiteOuf.com",
         "totalVote": 1,
         "profileImage": "../assets/images/galleria1.jpg"
       },
@@ -19,6 +20,61 @@
         "location": 
         {
           "position": "Lieu Léo"
+        },
+        "totalVote": 0,
+        "profileImage": "../assets/images/galleria1.jpg"
+      },
+      { 
+        "name": "La Mie Dinette",
+        "location": 
+        {
+          "position": "Lieu MD"
+        },
+        "totalVote": 0,
+        "profileImage": "../assets/images/galleria1.jpg"
+      },
+      { 
+        "name": "Trio",
+        "location": 
+        {
+          "position": "Lieu trio"
+        },
+        "totalVote": 0,
+        "profileImage": "../assets/images/galleria1.jpg"
+      },
+      { 
+        "name": "L'arménien",
+        "location": 
+        {
+          "positionByDay": 
+          {
+            "1": "Lieu1",
+            "2": "Lieu2",
+            "3": "Lieu3"
+          }
+        },
+        "totalVote": 0,
+        "profileImage": "../assets/images/galleria1.jpg"
+      },
+      { 
+        "name": "Ptit restau ?",
+        "location": 
+        {
+          "position": "Lieu restau"
+        },
+        "totalVote": 0,
+        "profileImage": "../assets/images/galleria1.jpg"
+      },
+      { 
+        "name": "Tahitien",
+        "location": 
+        {
+          "positionByDay": 
+          {
+            "1": "Lieu1",
+            "2": "Lieu2",
+            "3": "Lieu3"
+          }
         },
         "totalVote": 0,
         "profileImage": "../assets/images/galleria1.jpg"

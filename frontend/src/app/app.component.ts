@@ -13,7 +13,7 @@ declare var ol: any;
 export class AppComponent implements OnInit {
 
     showMenu = false;
-    darkModeActive = false;
+    darkModeActive = true;
     map: any;
 
     constructor() { }
