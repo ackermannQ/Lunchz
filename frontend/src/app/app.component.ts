@@ -25,10 +25,10 @@ export class AppComponent implements OnInit {
             new ol.layer.Tile({
               source: new ol.source.OSM()
             })
-          ],
+            ],
           view: new ol.View({
-            center: ol.proj.fromLonLat([73.8567, 18.5204]),
-            zoom: 8
+            center: ol.proj.fromLonLat([5.343100, 43.493333]),
+            zoom: 12
             })
         });
     }
