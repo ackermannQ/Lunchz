@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { FoodspotService } from './services/foodspot.service';
+import { WeatherService } from './services/weather.service';
 
 declare var ol: any;
 
@@ -8,17 +8,21 @@ declare var ol: any;
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    providers: [FoodspotService]
+    providers: [FoodspotService, WeatherService]
 })
 export class AppComponent implements OnInit {
 
     showMenu = false;
     darkModeActive = true;
     map: any;
+    weather: any;
 
     constructor() { }
 
     ngOnInit() {
+        setTimeout(() => {
+        }, 0);
+
         setTimeout(() => {
             this.map = new ol.Map({
                 target: 'map',

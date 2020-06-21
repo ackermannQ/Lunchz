@@ -22,9 +22,7 @@ export class LocationComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     const dayIndex = new Date().getDay();
     const position = this.location.getPosition(dayIndex).toString();
-    console.log(this.location, dayIndex, position);
     this.distance = position;
-    console.log(this.distance);
   }
 
 }

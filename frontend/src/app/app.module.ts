@@ -16,6 +16,12 @@ import { GmapComponent } from './gmap/gmap.component';
 import { GMapModule } from 'primeng/gmap';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MessageService } from 'primeng/api';
+import { DetailsComponent } from './details/details.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+   {path: 'details/:city', component: DetailsComponent},
+];
 
 @NgModule({
    declarations: [
@@ -23,7 +29,8 @@ import { MessageService } from 'primeng/api';
       FoodspotsComponent,
       LocationComponent,
       WeatherComponent,
-      GmapComponent
+      GmapComponent,
+      DetailsComponent
    ],
    imports: [
       BrowserModule,
@@ -35,9 +42,13 @@ import { MessageService } from 'primeng/api';
       DialogModule,
       ButtonModule,
       GMapModule,
-      GoogleMapsModule
+      GoogleMapsModule,
+      RouterModule.forRoot(routes)
    ],
-   providers: [MessageService],
+   exports: [ RouterModule ],
+   providers: [
+      MessageService
+   ],
    bootstrap: [
       AppComponent
    ]

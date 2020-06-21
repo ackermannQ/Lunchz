@@ -3,6 +3,5 @@ export class Position {
 
   constructor(json: any) {
     this.distance = json;
-    console.log(json);
   }
 }

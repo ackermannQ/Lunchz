@@ -4,7 +4,9 @@ import { Foodspot } from '../model/foodspot';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+  })
 export class FoodspotService {
 
     constructor(private http: HttpClient) {}
