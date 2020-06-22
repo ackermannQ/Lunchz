@@ -1,10 +1,8 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../services/weather.service';
 
-import { Subscription } from 'rxjs';
-import { first } from 'rxjs/operators';
+import { Subscription, Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-weather',
@@ -12,14 +10,20 @@ import { first } from 'rxjs/operators';
   styleUrls: ['./weather.component.css']
 })
 export class WeatherComponent implements OnInit {
-  baseURL: 'https://api.openweathermap.org/data/2.5/weather?q=Paris&APPID=2880b9f7733226a8d303b47c87ebc748&weather';
-  appID = '2880b9f7733226a8d303b47c87ebc748';
+  weather: Observable<any>;
+  city = 'Paris';
+  metric = 'metric';
 
-  constructor(public http: HttpClient) { }
-  
+  constructor(private weatherService: WeatherService) { }
+
   ngOnInit() {
-    const response = this.http.get(
-      `${this.baseURL}`).pipe((first()));
-    console.log(response);
+    this.fetchWeather(this.city, this.metric);
+  }
+
+  fetchWeather(city: string, metric: string) {
+    console.log('fetchweather')
+    this.weatherService.fetchWeather(city, metric).subscribe(resp => {
+      console.log(resp);
+    });
   }
 }

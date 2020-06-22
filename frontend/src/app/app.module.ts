@@ -16,11 +16,10 @@ import { GmapComponent } from './gmap/gmap.component';
 import { GMapModule } from 'primeng/gmap';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MessageService } from 'primeng/api';
-import { DetailsComponent } from './details/details.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-   {path: 'details/:city', component: DetailsComponent},
+   {path: 'details/:city', component: WeatherComponent},
 ];
 
 @NgModule({
@@ -29,8 +28,7 @@ const routes: Routes = [
       FoodspotsComponent,
       LocationComponent,
       WeatherComponent,
-      GmapComponent,
-      DetailsComponent
+      GmapComponent
    ],
    imports: [
       BrowserModule,
