@@ -28,6 +28,8 @@ Weather Card Styling
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
   margin-bottom: 1rem;
+  display: block;
+  text-align: center;
 }
 
 .temperature__text {
@@ -36,6 +38,9 @@ Weather Card Styling
   font-size: 4rem;
   font-weight: 100;
   letter-spacing: 0.1rem;
+  display: block;
+  text-align: center;
+  
 }
 
 .temperature-metric__text {
@@ -94,6 +99,7 @@ Weather Card Styling
 
 .weather-icon__container {
   width: 10rem;
+  margin-left: 5rem;
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;

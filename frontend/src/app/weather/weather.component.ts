@@ -11,8 +11,13 @@ import { Subscription, Observable } from 'rxjs';
 })
 export class WeatherComponent implements OnInit {
   weather: Observable<any>;
-  city = 'Paris';
+  city = 'Aix-en-provence';
   metric = 'metric';
+  currentTemp: number;
+  minTemp: number;
+  maxTemp: number;
+  condition: any;
+  description: any;
 
   constructor(private weatherService: WeatherService) { }
 
@@ -21,9 +26,14 @@ export class WeatherComponent implements OnInit {
   }
 
   fetchWeather(city: string, metric: string) {
-    console.log('fetchweather')
+    console.log('fetchweather');
+    setTimeout(() => {
     this.weatherService.fetchWeather(city, metric).subscribe(resp => {
-      console.log(resp);
-    });
+      this.currentTemp = this.weatherService.temp;
+      this.minTemp = this.weatherService.tempMin;
+      this.maxTemp = this.weatherService.tempMax;
+      this.description = this.weatherService.description;
+      this.condition = this.weatherService.condition;
+    }); }, 0);
   }
 }

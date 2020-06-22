@@ -21,9 +21,6 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         setTimeout(() => {
-        }, 0);
-
-        setTimeout(() => {
             this.map = new ol.Map({
                 target: 'map',
                 // pixelRatio: 1,
