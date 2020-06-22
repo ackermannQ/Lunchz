@@ -20,10 +20,13 @@ export class AppComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+        this.initMap();
+    }
+
+    initMap() {
         setTimeout(() => {
             this.map = new ol.Map({
                 target: 'map',
-                // pixelRatio: 1,
                 layers: [
                   new ol.layer.Tile({
                     source: new ol.source.OSM()
@@ -43,10 +46,9 @@ export class AppComponent implements OnInit {
                       ]
                   })
               });
-              this.map.addLayer(layer);
-              this.map.updateSize();
+            this.map.addLayer(layer);
+            this.map.updateSize();
         }, 0);
-
     }
 
     toggleMenu() {

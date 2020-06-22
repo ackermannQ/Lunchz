@@ -34,6 +34,7 @@ export class WeatherComponent implements OnInit {
       this.maxTemp = this.weatherService.tempMax;
       this.description = this.weatherService.description;
       this.condition = this.weatherService.condition;
-    }); }, 0);
+     });
+    }, 0);
   }
 }

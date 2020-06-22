@@ -12,9 +12,6 @@ import { AppComponent } from './app.component';
 import { FoodspotsComponent } from './foodspots/foodspots.component';
 import { LocationComponent } from './foodspots/location.component';
 import { WeatherComponent } from './weather/weather.component';
-import { GmapComponent } from './gmap/gmap.component';
-import { GMapModule } from 'primeng/gmap';
-import { GoogleMapsModule } from '@angular/google-maps';
 import { MessageService } from 'primeng/api';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -27,8 +24,7 @@ const routes: Routes = [
       AppComponent,
       FoodspotsComponent,
       LocationComponent,
-      WeatherComponent,
-      GmapComponent
+      WeatherComponent
    ],
    imports: [
       BrowserModule,
@@ -39,8 +35,6 @@ const routes: Routes = [
       InputTextModule,
       DialogModule,
       ButtonModule,
-      GMapModule,
-      GoogleMapsModule,
       RouterModule.forRoot(routes)
    ],
    exports: [ RouterModule ],
