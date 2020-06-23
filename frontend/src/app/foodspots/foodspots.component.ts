@@ -6,8 +6,7 @@ import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-foodspots',
   templateUrl: './foodspots.component.html',
-  styleUrls: ['./foodspots.component.css'],
-  providers: [MessageService]
+  styleUrls: ['./foodspots.component.css']
 })
 export class FoodspotsComponent implements OnInit {
 
@@ -41,7 +40,6 @@ export class FoodspotsComponent implements OnInit {
 
   upVotefunction(foodspot: Foodspot) {
     if (this.upVote) {
-      console.log('upvote!');
       this.messageService.add({severity: 'success', summary: 'Merci pour ton vote!', detail: 'Via MessageService'});
       this.upVote = false;
       foodspot.totalVote += 1;
@@ -51,8 +49,7 @@ export class FoodspotsComponent implements OnInit {
   }
 
   showViaService() {
-    console.log(console.log('Déjà voté !'));
-    this.messageService.add({severity: 'main', summary: 'Déjà voté', detail: 'Via MessageService'});
+    this.messageService.add({severity: 'error', summary: 'Déjà voté', detail: 'Déso pas déso'});
   }
 
   clear() {

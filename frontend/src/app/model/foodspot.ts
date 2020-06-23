@@ -9,6 +9,7 @@ export class Foodspot {
   totalVote: number;
   profileImage: string;
   gpsCoord: string;
+  color: string;
 
   constructor(json: any) {
     this.name = json.name;

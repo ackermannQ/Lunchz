@@ -1,5 +1,5 @@
 <div *ngIf="selectedFoodSpot" class="foodspot__image">
-  <img style="width:500px; height: 300px;" [src]="selectedFoodSpot.profileImage"/>
+  <img style="width: 500px; height: 300px;" [src]="selectedFoodSpot.profileImage"/>
 </div>
 
 <div class = "table__container">
@@ -15,6 +15,7 @@
         <tr>
           <td *ngFor="let col of cols" [ngSwitch]="col.field" style="text-align:center;"> 
             <app-location *ngSwitchCase="'location'" [location]="rowData[col.field]"></app-location>
+            <img *ngSwitchCase="'menu'" style="width: 32px; height: 32px;" [src]="rowData.menu"/>
             <span *ngSwitchDefault> {{ rowData[col.field] }}</span>
           </td>
           <td>

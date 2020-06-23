@@ -13,10 +13,11 @@
             "5": {"address": "180, Rue Réné Descartes, Aix la Duranne", "distance": "190 m", "lat": 43.495399, "lon": 5.344490 }
           }
         },
-        "menu": "../assets/images/original.jpg",
+        "menu": "../assets/images/menu_original.png",
         "totalVote": 0,
         "upvote": 0,
-        "profileImage": "../assets/images/galleria1.jpg"
+        "profileImage": "../assets/images/original.png",
+        "color": "#F29625"
       },
       { 
         "name": "Léo",
@@ -25,10 +26,10 @@
           "position":
           { "address": "565 Rue Marcellin Berthelot, Aix la Duranne", "distance": "5.3 km", "lat": 43.491694, "lon": 5.372238 }
         },
-        "menu": "Menu2",
+        "menu": "../assets/images/menu_leo.png",
         "totalVote": 0,
         "upvote": 0,
-        "profileImage": "../assets/images/galleria1.jpg"
+        "profileImage": "../assets/images/leo.png"
       },
       { 
         "name": "La Mie Dinette",
@@ -37,10 +38,10 @@
           "position":
           { "address": "5 Rue Charles Duchesne, Aix la Duranne", "distance": "4 km", "lat": 43.492068, "lon": 5.370904 }
         },        
-        "menu": "Menu2",
+        "menu": "../assets/images/menu_md.png",
         "totalVote": 0,
         "upvote": 0,
-        "profileImage": "../assets/images/galleria1.jpg"
+        "profileImage": "../assets/images/md.png"
       },
       { 
         "name": "OTrio",
@@ -49,10 +50,10 @@
           "position":
           { "address": "80 Rue Charles Duchesne, Aix la Duranne", "distance": "4 km", "lat": 43.491601, "lon": 5.371677 }
         },
-        "menu": "Menu2",
+        "menu": "../assets/images/menu_otrio.png",
         "totalVote": 0,
         "upvote": 0,
-        "profileImage": "../assets/images/galleria1.jpg"
+        "profileImage": "../assets/images/otrio.png"
       },
       { 
         "name": "Les saveurs d'arménie",
@@ -60,10 +61,10 @@
         {
           "positionByDay": 
           {
-            "1": { "address": "", "distance": "2.1 km", "lat": 0, "lon": 0 },
-            "2": { "address": "", "distance": "1.4 km", "lat": 0, "lon": 0 },
-            "3": {"address": "", "distance": "10 km", "lat": 0, "lon": 0 },
-            "4": {"address": "", "distance": "11.7 km", "lat": 0, "lon": 0 },
+            "1": { "address": "", "distance": "Fermé", "lat": 0, "lon": 0 },
+            "2": { "address": "", "distance": "Fermé", "lat": 0, "lon": 0 },
+            "3": {"address": "", "distance": "Fermé", "lat": 0, "lon": 0 },
+            "4": {"address": "", "distance": "Fermé", "lat": 0, "lon": 0 },
             "5": {"address": "180, Rue René Descartes, Aix la Duranne", "distance": "200 m", "lat": 43.39399, "lon": 5.34490 }
           }
         },
@@ -88,7 +89,7 @@
         "menu": "Menu2",
         "totalVote": 0,
         "upvote": 0,
-        "profileImage": "../assets/images/galleria1.jpg"
+        "profileImage": "../assets/images/mohana.jpg"
       },
       { 
         "name": "El Jefe",

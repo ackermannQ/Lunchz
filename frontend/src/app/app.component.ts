@@ -42,16 +42,16 @@ export class AppComponent implements OnInit {
                   }),
             });
 
-            this.addMarkerOnMap(agencyPos);
+            this.addMarkerOnMap(agencyPos, 'red');
             foodspots.forEach(fs => {
                 const position = fs.location.getTodayPosition();
-                this.addMarkerOnMap(position);
+                this.addMarkerOnMap(position, fs.color);
             });
             this.map.updateSize();
         });
     }
 
-    addMarkerOnMap(position: Position) {
+    addMarkerOnMap(position: Position, color: string = 'black') {
         const layer = new ol.layer.Vector({
             source: new ol.source.Vector({
                 features: [
