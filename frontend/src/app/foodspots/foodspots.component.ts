@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Foodspot } from '../model/foodspot';
 import { FoodspotService } from '../services/foodspot.service';
-import { Message } from 'primeng//api';
 import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-foodspots',
   templateUrl: './foodspots.component.html',
-  styleUrls: ['./foodspots.component.css']
+  styleUrls: ['./foodspots.component.css'],
+  providers: [MessageService]
 })
 export class FoodspotsComponent implements OnInit {
 
@@ -17,8 +17,6 @@ export class FoodspotsComponent implements OnInit {
   cols: any[];
 
   upVote: boolean = true;
-
-  msgs: Message[] = [];
 
   constructor(private foodSpotService: FoodspotService, private messageService: MessageService) {
     this.cols = [
@@ -44,6 +42,7 @@ export class FoodspotsComponent implements OnInit {
   upVotefunction() {
     if (this.upVote) {
       console.log('upvote!');
+      this.messageService.add({severity: 'success', summary: 'Merci pour ton vote!', detail: 'Via MessageService'});
       this.upVote = false;
     } else {
       this.showViaService();
@@ -52,8 +51,7 @@ export class FoodspotsComponent implements OnInit {
 
   showViaService() {
     console.log(console.log('Déjà voté !'));
-    this.msgs = [];
-    this.msgs.push({severity:'error', summary:'Error Message', detail:'Validation failed'});
+    this.messageService.add({severity: 'warn', summary: 'Déjà voté', detail: 'Via MessageService'});
   }
 
   clear() {

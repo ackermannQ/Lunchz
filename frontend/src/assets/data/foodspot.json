@@ -6,17 +6,17 @@
         {
           "positionByDay": 
           {
-            "1": "Lieu original1",
-            "2": "Lieu original2",
-            "3": "Lieu original3",
-            "4": "Lieu original4",
-            "5": "Lieu original5"
+            "1": "Lieu org1",
+            "2": "Lieu org2",
+            "3": "Lieu org3",
+            "4": "Lieu org4",
+            "5": "Lieu org5"
           }
         },
-        "menu": "Menu1",
+        "menu": "../assets/images/menu_original.jpg",
         "totalVote": 1,
         "upvote": 0,
-        "profileImage": "../assets/images/galleria1.jpg"
+        "profileImage": "../assets/images/original.jpg"
       },
       { 
         "name": "Léo",
@@ -24,6 +24,7 @@
         {
           "position": "Lieu Léo"
         },
+        "menu": "../assets/images/menu_original.jpg",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"
@@ -34,6 +35,7 @@
         {
           "position": "Lieu MD"
         },
+        "menu": "../assets/images/menu_original.jpg",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"
@@ -44,6 +46,7 @@
         {
           "position": "Lieu trio"
         },
+        "menu": "../assets/images/menu_original.jpg",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"
@@ -61,6 +64,7 @@
             "5": "Lieu5"
           }
         },
+        "menu": "../assets/images/menu_original.jpg",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"
@@ -71,6 +75,7 @@
         {
           "position": "Lieu restau"
         },
+        "menu": "../assets/images/menu_original.jpg",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"
@@ -88,6 +93,7 @@
             "5": "Lieu5"
           }
         },
+        "menu": "../assets/images/menu_original.jpg",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"

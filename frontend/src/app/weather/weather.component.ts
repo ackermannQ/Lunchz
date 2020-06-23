@@ -18,22 +18,38 @@ export class WeatherComponent implements OnInit {
   maxTemp: number;
   condition: any;
   description: any;
+  windSpeed: number;
 
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
-    this.fetchWeather(this.city, this.metric);
+    this.fetchWeatherCoord(this.city, this.metric);
   }
 
-  fetchWeather(city: string, metric: string) {
+  fetchWeatherCity(city: string, metric: string) {
     setTimeout(() => {
-    this.weatherService.fetchWeather(city, metric).subscribe(resp => {
+    this.weatherService.fetchWeatherCity(city, metric).subscribe(resp => {
       this.currentTemp = this.weatherService.temp;
       this.minTemp = this.weatherService.tempMin;
       this.maxTemp = this.weatherService.tempMax;
       this.description = this.weatherService.description;
       this.condition = this.weatherService.condition;
+      this.windSpeed = this.weatherService.windSpeed;
      });
     }, 0);
   }
+
+  fetchWeatherCoord(city: string, metric: string) {
+    setTimeout(() => {
+    this.weatherService.fetchWeatherCoord(city, metric).subscribe(resp => {
+      this.currentTemp = this.weatherService.temp;
+      this.minTemp = this.weatherService.tempMin;
+      this.maxTemp = this.weatherService.tempMax;
+      this.description = this.weatherService.description;
+      this.condition = this.weatherService.condition;
+      this.windSpeed = this.weatherService.windSpeed;
+     });
+    }, 0);
+  }
+
 }
