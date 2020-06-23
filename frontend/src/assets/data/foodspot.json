@@ -6,19 +6,11 @@
         {
           "positionByDay": 
           {
-            "1": "655 Avenue Galilée, Aix la Duranne",
-            "2": "365 Avenue Archimède, Aix la Duranne",
-            "3": "Place de l'horloge, Aix la Duranne",
-            "4": "5 Chemin des Gorges de Cabriès, Vitrolles",
-            "5": "180, Rue Réné Descartes, Aix la Duranne"
-          },
-          "distanceByDay":
-          {
-            "1": "2.1 km",
-            "2": "1.4 km",
-            "3": "10 km",
-            "4": "11.7 km",
-            "5": "190 m"
+            "1": { "address": "655 Avenue Galilée, Aix la Duranne", "distance": "2.1 km", "lat": 43.485916, "lon": 5.343199 },
+            "2": { "address": "365 Avenue Archimède, Aix la Duranne", "distance": "1.4 km", "lat": 43.490515, "lon": 5.340137 },
+            "3": {"address": "Place de l'horloge, Aix la Duranne", "distance": "10 km", "lat": 43.527778, "lon": 5.420569 },
+            "4": {"address": "5 Chemin des Gorges de Cabriès, Vitrolles", "distance": "11.7 km", "lat": 43.433486, "lon": 5.278484 },
+            "5": {"address": "180, Rue Réné Descartes, Aix la Duranne", "distance": "190 m", "lat": 43.495399, "lon": 5.344490 }
           }
         },
         "menu": "../assets/images/original.jpg",
@@ -30,8 +22,8 @@
         "name": "Léo",
         "location": 
         {
-          "position": "Lieu Léo",
-          "distance": "5.3 km"
+          "position":
+          { "address": "565 Rue Marcellin Berthelot, Aix la Duranne", "distance": "5.3 km", "lat": 43.491694, "lon": 5.372238 }
         },
         "menu": "Menu2",
         "totalVote": 0,
@@ -42,20 +34,20 @@
         "name": "La Mie Dinette",
         "location": 
         {
-          "position": "Lieu MD",
-          "distance": "4 km"
-        },
+          "position":
+          { "address": "5 Rue Charles Duchesne, Aix la Duranne", "distance": "4 km", "lat": 43.492068, "lon": 5.370904 }
+        },        
         "menu": "Menu2",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"
       },
       { 
-        "name": "Trio",
+        "name": "OTrio",
         "location": 
         {
-          "position": "Lieu trio",
-          "distance": "4 km"
+          "position":
+          { "address": "80 Rue Charles Duchesne, Aix la Duranne", "distance": "4 km", "lat": 43.491601, "lon": 5.371677 }
         },
         "menu": "Menu2",
         "totalVote": 0,
@@ -63,24 +55,16 @@
         "profileImage": "../assets/images/galleria1.jpg"
       },
       { 
-        "name": "L'arménien",
+        "name": "Les saveurs d'arménie",
         "location": 
         {
           "positionByDay": 
           {
-            "1": "Lieu1",
-            "2": "Lieu2",
-            "3": "Lieu3",
-            "4": "Lieu4",
-            "5": "Lieu5"
-          },
-          "distanceByDay":
-          {
-            "1": "2.1 km",
-            "2": "1.4 km",
-            "3": "10 km",
-            "4": "11.7 km",
-            "5": "190 m"
+            "1": { "address": "", "distance": "2.1 km", "lat": 0, "lon": 0 },
+            "2": { "address": "", "distance": "1.4 km", "lat": 0, "lon": 0 },
+            "3": {"address": "", "distance": "10 km", "lat": 0, "lon": 0 },
+            "4": {"address": "", "distance": "11.7 km", "lat": 0, "lon": 0 },
+            "5": {"address": "180, Rue René Descartes, Aix la Duranne", "distance": "200 m", "lat": 43.39399, "lon": 5.34490 }
           }
         },
         "menu": "Menu2",
@@ -89,24 +73,34 @@
         "profileImage": "../assets/images/galleria1.jpg"
       },
       { 
-        "name": "Tahitien",
+        "name": "Le Moana",
         "location": 
         {
           "positionByDay": 
           {
-            "1": "Fermé",
-            "2": "Lieu2",
-            "3": "Lieu3",
-            "4": "Lieu4",
-            "5": "Lieu5"
-          },
-          "distanceByDay":
+            "1": { "address": "Fermé", "distance": "Fermé", "lat": 0, "lon": 0 },
+            "2": { "address": "Marseille ou Marignane 1 mardi /2", "distance": "Luminy ou Marignane", "lat": 0, "lon": 0 },
+            "3": {"address": "380 Avenue Archimède, Aix la Duranne", "distance": "1.5 km", "lat": 43.489570, "lon": 5.338640 },
+            "4": {"address": "30 rue Frédéric Joliot, Aix la Duranne", "distance": "4.7 km", "lat": 43.488705, "lon": 5.378349 },
+            "5": {"address": "655 avenue de Galilée, Aix la Duranne", "distance": "2.1 km", "lat": 43.485854, "lon": 5.343156 }
+          }
+        },
+        "menu": "Menu2",
+        "totalVote": 0,
+        "upvote": 0,
+        "profileImage": "../assets/images/galleria1.jpg"
+      },
+      { 
+        "name": "El Jefe",
+        "location": 
+        {
+          "positionByDay": 
           {
-            "1": "Fermé",
-            "2": "1.4 km",
-            "3": "10 km",
-            "4": "11.7 km",
-            "5": "190 m"
+            "1": { "address": "Route de Berre, Éguilles", "distance": "7.5 km", "lat": 43.544732, "lon": 5.359697 },
+            "2": { "address": "Fermé", "distance": "Fermé", "lat": 0, "lon": 0 },
+            "3": {"address": "Rue François Dumouriez, Vitrolles", "distance": "15.8 km", "lat": 43.445046, "lon": 5.245155 },
+            "4": {"address": "Avenue Louis Phillibert, Aix la Duranne", "distance": "1.2 km", "lat": 43.492653, "lon": 5.340625 },
+            "5": {"address": "Fermé", "distance": "Fermé", "lat": 0, "lon": 0 }
           }
         },
         "menu": "Menu2",

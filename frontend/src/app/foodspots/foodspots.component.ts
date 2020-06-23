@@ -43,12 +43,11 @@ export class FoodspotsComponent implements OnInit {
     if (this.upVote) {
       console.log('upvote!');
       this.messageService.add({severity: 'success', summary: 'Merci pour ton vote!', detail: 'Via MessageService'});
-      // this.upVote = false;
+      this.upVote = false;
       foodspot.totalVote += 1;
+    } else {
+      this.showViaService();
     }
-    // else {
-    //   this.showViaService();
-    // }
   }
 
   showViaService() {

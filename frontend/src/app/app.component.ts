@@ -1,6 +1,9 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FoodspotService } from './services/foodspot.service';
 import { WeatherService } from './services/weather.service';
+import { LocationComponent } from './foodspots/location.component';
+import { Foodspot } from './model/foodspot';
+import { Position } from './model/position';
 
 declare var ol: any;
 
@@ -17,14 +20,15 @@ export class AppComponent implements OnInit {
     map: any;
     weather: any;
 
-    constructor() { }
+    constructor(private foodspotService: FoodspotService) { }
 
     ngOnInit() {
-        this.initMap();
+        setTimeout(() => this.initMap(), 0);
     }
 
     initMap() {
-        setTimeout(() => {
+        const agencyPos: Position = {address: "ICI CEST L'AGENCE", distance: "0 connard", lon: 5.343100, lat: 43.493333};
+        this.foodspotService.getFoodSpot().subscribe(foodspots => {
             this.map = new ol.Map({
                 target: 'map',
                 layers: [
@@ -33,36 +37,31 @@ export class AppComponent implements OnInit {
                   })
                   ],
                 view: new ol.View({
-                  center: ol.proj.fromLonLat([5.343100, 43.493333]),
+                  center: ol.proj.fromLonLat([agencyPos.lon, agencyPos.lat]),
                   zoom: 12.5
                   }),
-              });
-              const layer = new ol.layer.Vector({
-                  source: new ol.source.Vector({
-                      features: [
-                          new ol.Feature({
-                              geometry: new ol.geom.Point(ol.proj.fromLonLat([5.343100, 43.493333]))
-                          })
-                      ]
-                  })
-              });
-            this.map.addLayer(layer);
+            });
+
+            this.addMarkerOnMap(agencyPos);
+            foodspots.forEach(fs => {
+                const position = fs.location.getTodayPosition();
+                this.addMarkerOnMap(position);
+            });
             this.map.updateSize();
-            this.addMarkerOnMap(this.map, 5.371677, 43.491601);
-        }, 0);
+        });
     }
 
-    addMarkerOnMap(map: any, lon: number, lat: number) {
+    addMarkerOnMap(position: Position) {
         const layer = new ol.layer.Vector({
             source: new ol.source.Vector({
                 features: [
                     new ol.Feature({
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([lon, lat]))
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([position.lon, position.lat]))
                     })
                 ]
             })
         });
-        map.addLayer(layer);
+        this.map.addLayer(layer);
     }
 
     toggleMenu() {

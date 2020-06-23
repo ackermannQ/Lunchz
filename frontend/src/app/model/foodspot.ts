@@ -8,6 +8,7 @@ export class Foodspot {
   upvote: number;
   totalVote: number;
   profileImage: string;
+  gpsCoord: string;
 
   constructor(json: any) {
     this.name = json.name;
@@ -17,6 +18,7 @@ export class Foodspot {
     this.profileImage = json.profileImage;
     this.menu = json.menu;
     this.distance = json.distance;
+    this.gpsCoord = json.gpsCoord;
 
    }
 

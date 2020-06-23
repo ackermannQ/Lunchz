@@ -11,7 +11,7 @@ export class LocationComponent implements OnInit, AfterViewInit {
 
   @Input() location: Location;
 
-  position: string;
+  address: string;
   distance: string;
 
   constructor() { }
@@ -21,9 +21,8 @@ export class LocationComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const dayIndex = new Date().getDay();
-    this.position = this.location.getPosition(dayIndex).toString();
-    this.distance = this.location.getDistance(dayIndex).toString();
+    const position = this.location.getTodayPosition();
+    this.address = position.address;
+    this.distance = position.distance;
   }
-
 }
