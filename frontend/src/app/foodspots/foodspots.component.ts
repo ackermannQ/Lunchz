@@ -39,17 +39,35 @@ export class FoodspotsComponent implements OnInit {
   }
 
   upVotefunction(foodspot: Foodspot) {
-    if (this.upVote) {
-      this.messageService.add({severity: 'success', summary: 'Merci pour ton vote!', detail: 'Via MessageService'});
-      this.upVote = false;
-      foodspot.totalVote += 1;
+    if (foodspot.totalVote === 0) {
+      if (this.upVote) {
+        this.messageService.add({ severity: 'success', summary: 'Merci pour ton vote!', detail: 'On est pas bien là ?' });
+        this.upVote = false;
+        this.resetAll(foodspot);
+        foodspot.upvote += 1;
+        foodspot.totalVote += 1;
+      } else {
+        this.showViaService();
+        foodspot.upvote -= 1;
+        foodspot.totalVote -= 1;
+        this.upVote = true;
+      }
     } else {
-      this.showViaService();
+      foodspot.totalVote = 0;
     }
   }
 
+  resetAll(foodspot: Foodspot) {
+    this.foodSpotService.getFoodSpot().subscribe(foodSpots => {
+      foodSpots.forEach(fs => {
+        fs.totalVote -= 1;
+      });
+    });
+
+  }
+
   showViaService() {
-    this.messageService.add({severity: 'error', summary: 'Déjà voté', detail: 'Déso pas déso'});
+    this.messageService.add({severity: 'error', summary: 'Déjà voté', detail: "Arrête de faire n'importe quoi"});
   }
 
   clear() {
