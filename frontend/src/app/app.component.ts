@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FoodspotService } from './services/foodspot.service';
 import { WeatherService } from './services/weather.service';
 
@@ -48,7 +48,21 @@ export class AppComponent implements OnInit {
               });
             this.map.addLayer(layer);
             this.map.updateSize();
+            this.addMarkerOnMap(this.map, 5.371677, 43.491601);
         }, 0);
+    }
+
+    addMarkerOnMap(map: any, lon: number, lat: number) {
+        const layer = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat([lon, lat]))
+                    })
+                ]
+            })
+        });
+        map.addLayer(layer);
     }
 
     toggleMenu() {

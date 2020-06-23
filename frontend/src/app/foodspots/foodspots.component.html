@@ -17,8 +17,10 @@
             <app-location *ngSwitchCase="'location'" [location]="rowData[col.field]"></app-location>
             <span *ngSwitchDefault> {{ rowData[col.field] }}</span>
           </td>
-          <button pButton type="button" icon="pi pi-chevron-up" label="Up" class="ui-button-raised ui-button-rounded" 
-          (click)="upVotefunction($event)" style="margin-left: 2rem; margin-top: 0.75rem; background-color: rgb(54, 50, 50);"></button>
+          <td>
+            <button pButton type="button" icon="pi pi-chevron-up" label="Up" class="ui-button-raised ui-button-rounded" 
+            (click)="upVotefunction(rowData)" style="background-color: rgb(54, 50, 50);"></button>
+          </td>
         </tr>
     </ng-template>
   </p-table>

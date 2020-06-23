@@ -39,12 +39,12 @@ export class FoodspotsComponent implements OnInit {
     this.selectedFoodSpot = this.foodSpots[0];
   }
 
-  upVotefunction() {
+  upVotefunction(foodspot: Foodspot) {
     if (this.upVote) {
       console.log('upvote!');
       this.messageService.add({severity: 'success', summary: 'Merci pour ton vote!', detail: 'Via MessageService'});
       // this.upVote = false;
-      this.foodSpots['0']['totalVote'] += 1;
+      foodspot.totalVote += 1;
     }
     // else {
     //   this.showViaService();

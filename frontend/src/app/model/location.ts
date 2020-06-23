@@ -1,5 +1,6 @@
 import { Day } from './day.enum';
 import { Position } from './position';
+import { throwError } from 'rxjs';
 
 export class Location {
 
@@ -18,16 +19,20 @@ export class Location {
   getPosition(day: Day): Position {
     if (this.position) {
       return this.position;
-    } else {
+    } else if (this.positionByDay) {
       return this.positionByDay[day];
+    } else {
+      console.log("Error : invalid location", this);
     }
   }
 
   getDistance(day: Day): Position {
     if (this.distance) {
       return this.distance;
-    } else {
+    } else if (this.distanceByDay) {
       return this.distanceByDay[day];
+    } else {
+      console.log("Error : invalid location", this);
     }
   }
 }

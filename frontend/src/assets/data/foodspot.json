@@ -22,7 +22,7 @@
           }
         },
         "menu": "../assets/images/original.jpg",
-        "totalVote": 1,
+        "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"
       },
@@ -73,6 +73,14 @@
             "3": "Lieu3",
             "4": "Lieu4",
             "5": "Lieu5"
+          },
+          "distanceByDay":
+          {
+            "1": "2.1 km",
+            "2": "1.4 km",
+            "3": "10 km",
+            "4": "11.7 km",
+            "5": "190 m"
           }
         },
         "menu": "Menu2",
@@ -86,11 +94,19 @@
         {
           "positionByDay": 
           {
-            "1": "Lieu1",
+            "1": "Fermé",
             "2": "Lieu2",
             "3": "Lieu3",
             "4": "Lieu4",
             "5": "Lieu5"
+          },
+          "distanceByDay":
+          {
+            "1": "Fermé",
+            "2": "1.4 km",
+            "3": "10 km",
+            "4": "11.7 km",
+            "5": "190 m"
           }
         },
         "menu": "Menu2",

@@ -14,6 +14,7 @@ import { LocationComponent } from './foodspots/location.component';
 import { WeatherComponent } from './weather/weather.component';
 import { MessageService } from 'primeng/api';
 import { Routes, RouterModule } from '@angular/router';
+import {ToastModule} from 'primeng/toast';
 
 const routes: Routes = [
    {path: 'details/:city', component: WeatherComponent},
@@ -35,7 +36,8 @@ const routes: Routes = [
       InputTextModule,
       DialogModule,
       ButtonModule,
-      RouterModule.forRoot(routes)
+      RouterModule.forRoot(routes),
+      ToastModule
    ],
    exports: [ RouterModule ],
    providers: [
