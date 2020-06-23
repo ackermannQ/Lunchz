@@ -16,14 +16,14 @@ export class FoodspotsComponent implements OnInit {
 
   cols: any[];
 
-  upVote: boolean = true;
+  upVote = true;
 
   constructor(private foodSpotService: FoodspotService, private messageService: MessageService) {
     this.cols = [
       { field: 'name', header: 'Spot' },
       { field: 'location', header: 'Distance' },
       { field: 'menu', header: 'Menu' },
-      { field: 'upvote', header: 'Votez !' }
+      { field: 'totalVote', header: 'Votez !' }
     ];
   }
 
@@ -43,15 +43,17 @@ export class FoodspotsComponent implements OnInit {
     if (this.upVote) {
       console.log('upvote!');
       this.messageService.add({severity: 'success', summary: 'Merci pour ton vote!', detail: 'Via MessageService'});
-      this.upVote = false;
-    } else {
-      this.showViaService();
+      // this.upVote = false;
+      this.foodSpots['0']['totalVote'] += 1;
     }
+    // else {
+    //   this.showViaService();
+    // }
   }
 
   showViaService() {
     console.log(console.log('Déjà voté !'));
-    this.messageService.add({severity: 'warn', summary: 'Déjà voté', detail: 'Via MessageService'});
+    this.messageService.add({severity: 'main', summary: 'Déjà voté', detail: 'Via MessageService'});
   }
 
   clear() {

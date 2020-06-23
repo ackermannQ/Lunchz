@@ -6,25 +6,34 @@
         {
           "positionByDay": 
           {
-            "1": "Lieu org1",
-            "2": "Lieu org2",
-            "3": "Lieu org3",
-            "4": "Lieu org4",
-            "5": "Lieu org5"
+            "1": "655 Avenue Galilée, Aix la Duranne",
+            "2": "365 Avenue Archimède, Aix la Duranne",
+            "3": "Place de l'horloge, Aix la Duranne",
+            "4": "5 Chemin des Gorges de Cabriès, Vitrolles",
+            "5": "180, Rue Réné Descartes, Aix la Duranne"
+          },
+          "distanceByDay":
+          {
+            "1": "2.1 km",
+            "2": "1.4 km",
+            "3": "10 km",
+            "4": "11.7 km",
+            "5": "190 m"
           }
         },
-        "menu": "../assets/images/menu_original.jpg",
+        "menu": "../assets/images/original.jpg",
         "totalVote": 1,
         "upvote": 0,
-        "profileImage": "../assets/images/original.jpg"
+        "profileImage": "../assets/images/galleria1.jpg"
       },
       { 
         "name": "Léo",
         "location": 
         {
-          "position": "Lieu Léo"
+          "position": "Lieu Léo",
+          "distance": "5.3 km"
         },
-        "menu": "../assets/images/menu_original.jpg",
+        "menu": "Menu2",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"
@@ -33,9 +42,10 @@
         "name": "La Mie Dinette",
         "location": 
         {
-          "position": "Lieu MD"
+          "position": "Lieu MD",
+          "distance": "4 km"
         },
-        "menu": "../assets/images/menu_original.jpg",
+        "menu": "Menu2",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"
@@ -44,9 +54,10 @@
         "name": "Trio",
         "location": 
         {
-          "position": "Lieu trio"
+          "position": "Lieu trio",
+          "distance": "4 km"
         },
-        "menu": "../assets/images/menu_original.jpg",
+        "menu": "Menu2",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"
@@ -64,18 +75,7 @@
             "5": "Lieu5"
           }
         },
-        "menu": "../assets/images/menu_original.jpg",
-        "totalVote": 0,
-        "upvote": 0,
-        "profileImage": "../assets/images/galleria1.jpg"
-      },
-      { 
-        "name": "Ptit restau ?",
-        "location": 
-        {
-          "position": "Lieu restau"
-        },
-        "menu": "../assets/images/menu_original.jpg",
+        "menu": "Menu2",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"
@@ -93,7 +93,7 @@
             "5": "Lieu5"
           }
         },
-        "menu": "../assets/images/menu_original.jpg",
+        "menu": "Menu2",
         "totalVote": 0,
         "upvote": 0,
         "profileImage": "../assets/images/galleria1.jpg"

@@ -3,6 +3,7 @@ import { Location } from './location';
 export class Foodspot {
   name: string;
   location: Location;
+  distance: Location;
   menu: string;
   upvote: number;
   totalVote: number;
@@ -15,6 +16,7 @@ export class Foodspot {
     this.totalVote = json.totalVote;
     this.profileImage = json.profileImage;
     this.menu = json.menu;
+    this.distance = json.distance;
 
    }
 
