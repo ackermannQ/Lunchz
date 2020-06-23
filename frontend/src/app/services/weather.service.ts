@@ -35,8 +35,6 @@ export class WeatherService implements OnInit {
         this.tempMax = resp['main']['temp_max'];
         this.windSpeed = resp['wind']['speed'];
         this.condition = resp['weather']['0']['main'];
-
-        console.log(this.condition);
   }));
   }
 

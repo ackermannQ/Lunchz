@@ -26,7 +26,6 @@ export class WeatherComponent implements OnInit {
   }
 
   fetchWeather(city: string, metric: string) {
-    console.log('fetchweather');
     setTimeout(() => {
     this.weatherService.fetchWeather(city, metric).subscribe(resp => {
       this.currentTemp = this.weatherService.temp;
