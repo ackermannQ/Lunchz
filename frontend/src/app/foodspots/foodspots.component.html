@@ -1,6 +1,6 @@
 <p-overlayPanel #menuOverlay>
-  <h2>Menu du jour</h2>
-  <p>{{ displayedMenu }}</p>
+  <h2>Extrait du menu :</h2>
+  <div [innerHTML]="displayedMenu"></div>
 </p-overlayPanel>
 
 <div *ngIf="selectedFoodSpot" class="foodspot__image">
@@ -13,7 +13,8 @@
         <tr >
           <td *ngFor="let col of cols" [ngSwitch]="col.field" style="text-align:center;"> 
             <app-location *ngSwitchCase="'location'" [location]="rowData[col.field]"></app-location>
-            <img *ngSwitchCase="'menu_image'" style="width: 32px; height: 32px; cursor: pointer;" [src]="rowData.menu_image" (click)="displayedMenu = rowData.menu_image; menuOverlay.toggle($event)"/>
+            <img *ngSwitchCase="'menu_image'" style="width: 32px; height: 32px; cursor: pointer;" [src]="rowData.menu_image" 
+            (click)="showMenu(rowData, $event)"/>
             <span *ngSwitchDefault> {{ rowData[col.field] }}</span>
           </td>
           <td Style="width: 4em;">

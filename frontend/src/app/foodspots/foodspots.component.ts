@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Foodspot } from '../model/foodspot';
 import { FoodspotService } from '../services/foodspot.service';
 import { MessageService } from 'primeng/api';
+import { OverlayPanel } from 'primeng/overlaypanel';
+import { MenuService } from '../services/menu.service';
 
 @Component({
   selector: 'app-foodspots',
@@ -17,7 +19,11 @@ export class FoodspotsComponent implements OnInit {
 
   cols: any[];
 
-  constructor(private foodSpotService: FoodspotService, private messageService: MessageService) {
+  @ViewChild("menuOverlay") menuOverlay: OverlayPanel;
+
+  constructor(private foodSpotService: FoodspotService,
+              private messageService: MessageService,
+              private menuService: MenuService) {
     this.cols = [
       { field: 'name', header: 'Spot' },
       { field: 'location', header: 'Distance' },
@@ -51,6 +57,13 @@ export class FoodspotsComponent implements OnInit {
 
   clear() {
     this.messageService.clear();
+  }
+
+  showMenu(foodspot: Foodspot, event: any) {
+    this.menuService.getMenu(foodspot.menu).subscribe(menuContent => {
+      this.displayedMenu = menuContent;
+      this.menuOverlay.toggle(event);
+    });
   }
 
 }
