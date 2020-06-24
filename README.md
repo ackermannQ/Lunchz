@@ -8,7 +8,7 @@ In many companies, people have a set of places where they fetch their lunch, how
 With this app, everyone can vote for the place they like the most and see who wants to come !
 
 
-The purpose of this project is to get familiar with Angular and link a front-end to a back-end server I designed as well as creating a database to manage the information !
+The goal of this project is to get familiar with Angular and link a front-end to a back-end server I designed as well as creating a database to manage the information !
 
 ## Getting Started
 
