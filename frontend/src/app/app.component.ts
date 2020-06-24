@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FoodspotService } from './services/foodspot.service';
 import { WeatherService } from './services/weather.service';
 import { Position } from './model/position';
+import { Icon, Style } from 'ol/style';
 
 declare var ol: any;
 
@@ -50,15 +51,24 @@ export class AppComponent implements OnInit {
     }
 
     addMarkerOnMap(position: Position, color: string = 'black') {
+        const feature = new ol.Feature({
+            geometry: new ol.geom.Point(ol.proj.fromLonLat([position.lon, position.lat]))
+        });
+
+        feature.setStyle(new ol.style.Style({
+            image: new ol.style.Icon({
+              color: color,
+              crossOrigin: 'anonymous',
+              src: '../assets/images/dot.png',
+            })
+        }));
+
         const layer = new ol.layer.Vector({
             source: new ol.source.Vector({
-                features: [
-                    new ol.Feature({
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([position.lon, position.lat]))
-                    })
-                ]
+                features: [ feature ]
             })
         });
+
         this.map.addLayer(layer);
     }
 

@@ -7,14 +7,16 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
+import { MessageService } from 'primeng/api';
+import { Routes, RouterModule } from '@angular/router';
+import {ToastModule} from 'primeng/toast';
+import {OverlayPanelModule} from 'primeng/overlaypanel';
 
 import { AppComponent } from './app.component';
 import { FoodspotsComponent } from './foodspots/foodspots.component';
 import { LocationComponent } from './foodspots/location.component';
 import { WeatherComponent } from './weather/weather.component';
-import { MessageService } from 'primeng/api';
-import { Routes, RouterModule } from '@angular/router';
-import {ToastModule} from 'primeng/toast';
+
 
 const routes: Routes = [
    {path: 'details/:city', component: WeatherComponent},
@@ -36,8 +38,9 @@ const routes: Routes = [
       InputTextModule,
       DialogModule,
       ButtonModule,
-      RouterModule.forRoot(routes),
-      ToastModule
+      ToastModule,
+      OverlayPanelModule,
+      RouterModule.forRoot(routes)
    ],
    exports: [ RouterModule ],
    providers: [

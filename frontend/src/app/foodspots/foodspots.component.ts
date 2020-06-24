@@ -13,6 +13,7 @@ export class FoodspotsComponent implements OnInit {
   foodSpots: Foodspot[] = [];
   selectedFoodSpot: Foodspot;
   upvotedFoodspot: Foodspot;
+  displayedMenu: string;
 
   cols: any[];
 
@@ -20,7 +21,7 @@ export class FoodspotsComponent implements OnInit {
     this.cols = [
       { field: 'name', header: 'Spot' },
       { field: 'location', header: 'Distance' },
-      { field: 'menu', header: 'Menu' },
+      { field: 'menu_image', header: 'Menu' },
       { field: 'totalVote', header: 'Votez !' }
     ];
   }
