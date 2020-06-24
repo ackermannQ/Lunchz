@@ -12,10 +12,9 @@ export class FoodspotsComponent implements OnInit {
 
   foodSpots: Foodspot[] = [];
   selectedFoodSpot: Foodspot;
+  upvotedFoodspot: Foodspot;
 
   cols: any[];
-
-  upVote = true;
 
   constructor(private foodSpotService: FoodspotService, private messageService: MessageService) {
     this.cols = [
@@ -34,40 +33,19 @@ export class FoodspotsComponent implements OnInit {
   }
 
   updateSelected() {
-    this.foodSpots = this.foodSpots.sort( (a, b) => a.totalVote - b.totalVote );
+    this.foodSpots = this.foodSpots.sort( (a, b) => b.totalVote - a.totalVote );
     this.selectedFoodSpot = this.foodSpots[0];
   }
 
-  upVotefunction(foodspot: Foodspot) {
-    if (foodspot.totalVote === 0) {
-      if (this.upVote) {
-        this.messageService.add({ severity: 'success', summary: 'Merci pour ton vote!', detail: 'On est pas bien là ?' });
-        this.upVote = false;
-        this.resetAll(foodspot);
-        foodspot.upvote += 1;
-        foodspot.totalVote += 1;
-      } else {
-        this.showViaService();
-        foodspot.upvote -= 1;
-        foodspot.totalVote -= 1;
-        this.upVote = true;
-      }
-    } else {
-      foodspot.totalVote = 0;
+  upvote(foodspot: Foodspot) {
+    if (this.upvotedFoodspot) {
+      this.upvotedFoodspot.totalVote -= 1;
     }
-  }
 
-  resetAll(foodspot: Foodspot) {
-    this.foodSpotService.getFoodSpot().subscribe(foodSpots => {
-      foodSpots.forEach(fs => {
-        fs.totalVote -= 1;
-      });
-    });
+    foodspot.totalVote += 1;
+    this.upvotedFoodspot = foodspot;
 
-  }
-
-  showViaService() {
-    this.messageService.add({severity: 'error', summary: 'Déjà voté', detail: "Arrête de faire n'importe quoi"});
+    this.updateSelected();
   }
 
   clear() {

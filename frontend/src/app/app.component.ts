@@ -1,8 +1,6 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FoodspotService } from './services/foodspot.service';
 import { WeatherService } from './services/weather.service';
-import { LocationComponent } from './foodspots/location.component';
-import { Foodspot } from './model/foodspot';
 import { Position } from './model/position';
 
 declare var ol: any;

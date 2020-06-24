@@ -71,7 +71,7 @@
         "menu": "../assets/images/menu_saveurs.png",
         "totalVote": 0,
         "upvote": 0,
-        "profileImage": "../assets/images/saveurs.png"
+        "profileImage": "../assets/images/saveurs.svg"
       },
       { 
         "name": "Le Moana",

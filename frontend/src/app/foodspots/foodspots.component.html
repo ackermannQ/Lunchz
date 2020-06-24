@@ -4,23 +4,15 @@
 
 <div class = "table__container">
   <p-table styleClass="choice__table" [value]="foodSpots">
-    <ng-template pTemplate="header">
-        <tr>
-            <!-- <th *ngFor="let col of cols">
-                {{col.header}}
-            </th> -->
-        </tr>
-    </ng-template>
     <ng-template pTemplate="body" let-rowData>
-        <tr>
+        <tr >
           <td *ngFor="let col of cols" [ngSwitch]="col.field" style="text-align:center;"> 
             <app-location *ngSwitchCase="'location'" [location]="rowData[col.field]"></app-location>
             <img *ngSwitchCase="'menu'" style="width: 32px; height: 32px;" [src]="rowData.menu"/>
             <span *ngSwitchDefault> {{ rowData[col.field] }}</span>
           </td>
-          <td>
-            <button pButton type="button" icon="pi pi-chevron-up" label="Up" class="ui-button-raised ui-button-rounded" 
-            (click)="upVotefunction(rowData)" style="background-color: rgb(54, 50, 50);"></button>
+          <td Style="width: 4em;">
+            <button pButton type="button" icon="pi pi-chevron-up" (click)="upvote(rowData)" [disabled]="upvotedFoodspot===rowData"></button>
           </td>
         </tr>
     </ng-template>
