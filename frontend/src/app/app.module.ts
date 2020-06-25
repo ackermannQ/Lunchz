@@ -17,6 +17,7 @@ import { FoodspotsComponent } from './foodspots/foodspots.component';
 import { LocationComponent } from './foodspots/location.component';
 import { WeatherComponent } from './weather/weather.component';
 import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
       FoodspotsComponent,
       LocationComponent,
       WeatherComponent,
-      LoginComponent
+      LoginComponent,
+      AdminComponent
    ],
    imports: [
       BrowserModule,
