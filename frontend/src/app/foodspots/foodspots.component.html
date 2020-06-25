@@ -10,8 +10,8 @@
 <div class = "table__container">
   <p-table styleClass="choice__table" [value]="foodSpots">
     <ng-template pTemplate="body" let-rowData>
-        <tr >
-          <td *ngFor="let col of cols" [ngSwitch]="col.field" style="text-align:center;"> 
+        <tr [ngStyle]="{'background-color': rowData.color}">
+          <td *ngFor="let col of cols;" [ngSwitch]="col.field" style="text-align:center;" > 
             <app-location *ngSwitchCase="'location'" [location]="rowData[col.field]"></app-location>
             <img *ngSwitchCase="'menu_image'" style="width: 32px; height: 32px; cursor: pointer;" [src]="rowData.menu_image" 
             (click)="showMenu(rowData, $event)"/>

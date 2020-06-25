@@ -7,16 +7,17 @@ import { User } from '../model/users';
 import { Role } from '../model/role';
 
 const users: User[] = [
-    { id: 1, username: 'admin', password: 'admin',  role: Role.Admin },
-    { id: 2, username: 'user', password: 'user', role: Role.User }
+    { id: 1, username: 'Ackermann', password: 'oui',  role: Role.Admin },
+    { id: 2, username: 'achambri', password: '0achambri9', role: Role.User },
+    { id: 3, username: 'rbiehler', password: '0rbiehler9', role: Role.User },
+    { id: 4, username: 'momo', password: '0momo9', role: Role.User },
+    { id: 5, username: 'adelansay', password: '0adelansay9', role: Role.User }
 ];
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         const { url, method, headers, body } = request;
-
-        // wrap in delayed observable to simulate server api call
         return of(null)
             .pipe(mergeMap(handleRoute))
             .pipe(materialize()) // call materialize and dematerialize to ensure delay even if an error is thrown
