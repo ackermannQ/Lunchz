@@ -2,7 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FoodspotService } from './services/foodspot.service';
 import { WeatherService } from './services/weather.service';
 import { Position } from './model/position';
-import { Icon, Style } from 'ol/style';
+
+import { Router } from '@angular/router';
+import { AuthenticationService } from './services/authentication.service';
+import { User} from './model/users';
+import { Role } from './model/role';
 
 declare var ol: any;
 
@@ -19,10 +23,23 @@ export class AppComponent implements OnInit {
     map: any;
     weather: any;
 
-    constructor(private foodspotService: FoodspotService) { }
+    currentUser: User;
+
+    constructor(private foodspotService: FoodspotService, private router: Router, private authenticationService: AuthenticationService) {
+        this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+     }
 
     ngOnInit() {
         setTimeout(() => this.initMap(), 0);
+    }
+
+    get isAdmin() {
+        return this.currentUser && this.currentUser.role === Role.Admin;
+    }
+
+    logout() {
+        this.authenticationService.logout();
+        this.router.navigate(['/login']);
     }
 
     initMap() {
