@@ -19,6 +19,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -46,6 +47,7 @@ const routes: Routes = [
       ButtonModule,
       ToastModule,
       OverlayPanelModule,
+      ReactiveFormsModule,
       RouterModule.forRoot(routes)
    ],
    exports: [
