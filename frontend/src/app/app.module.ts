@@ -21,14 +21,10 @@ import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-// used to create fake backend
 import { fakeBackendProvider } from './_helpers/fake-backend';
-
 import { AppComponent } from './app.component';
 import { appRoutingModule } from './app.routing';
-
-import { ErrorInterceptor } from './_helpers/error.interceptor';
-import { JwtInterceptor } from './_helpers/jwt.interceptor';
+import { LunchzComponent } from './lunchz/lunchz.component';
 
 
 const routes: Routes = [
@@ -43,7 +39,8 @@ const routes: Routes = [
       WeatherComponent,
       LoginComponent,
       AdminComponent,
-      HomeComponent
+      HomeComponent,
+      LunchzComponent
    ],
    imports: [
       BrowserModule,
@@ -65,9 +62,6 @@ const routes: Routes = [
    ],
    providers: [
       MessageService,
-      { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-      { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
       fakeBackendProvider
    ],
    bootstrap: [
