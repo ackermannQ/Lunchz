@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { FoodspotsComponent } from './foodspots/foodspots.component';
 import { LocationComponent } from './foodspots/location.component';
 import { WeatherComponent } from './weather/weather.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -27,7 +28,8 @@ const routes: Routes = [
       AppComponent,
       FoodspotsComponent,
       LocationComponent,
-      WeatherComponent
+      WeatherComponent,
+      LoginComponent
    ],
    imports: [
       BrowserModule,
@@ -42,7 +44,9 @@ const routes: Routes = [
       OverlayPanelModule,
       RouterModule.forRoot(routes)
    ],
-   exports: [ RouterModule ],
+   exports: [
+      RouterModule
+   ],
    providers: [
       MessageService
    ],
