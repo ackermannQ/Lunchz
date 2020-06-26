@@ -3,6 +3,6 @@ services:
   playground-web-db:
     image: mongo:4.2.2
     environment:
-      MONGO_INITDB_DATABASE: playground-web
+      MONGO_INITDB_DATABASE: users_lunchz
     ports:
       - 27017:27017
