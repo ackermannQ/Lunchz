@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    User user = new User("1", "Ackermann");
+    User user = new User("1", "Ackermann", "oui", "Administrateur");
 
     @GetMapping("/lunchz")
     public String displayInfos() {
